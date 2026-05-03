@@ -39,6 +39,15 @@
         "**/node_modules/ffmpeg-static/**"
       ]
     },
+    "linux": {
+      "target": "tar.gz",
+      "icon": "assets/teleMirror.png",
+      "artifactName": "teleMirror-${arch}-linux.tar.gz",
+      "compression": "maximum",
+      "asarUnpack": [
+        "**/node_modules/ffmpeg-static/**"
+      ]
+    },
     "electronDownload": {
       "mirror": "https://npmmirror.com/mirrors/electron/"
     },
