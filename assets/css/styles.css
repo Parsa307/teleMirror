@@ -241,6 +241,23 @@ body.light-theme .message-text a:hover {
     text-decoration: underline;
 }
 
+/* Light theme code block styles */
+body.light-theme .message-text code {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #d63384;
+    direction: ltr;
+    text-align: left;
+}
+
+body.light-theme .message-text pre {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #212529;
+    direction: ltr;
+    text-align: left;
+}
+
 body.light-theme .message-bubble.own .message-text {
     color: white;
 }
@@ -303,6 +320,17 @@ body.light-theme .header-leave-button:hover {
     transform: translateY(-1px);
 }
 
+/* Light theme for View Channel button */
+body.light-theme .header-view-button {
+    background: #007bff;
+    color: white;
+}
+
+body.light-theme .header-view-button:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
 body.light-theme ::-webkit-scrollbar-track {
     background: #f1f3f4;
 }
@@ -324,6 +352,7 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     justify-content: space-between;
     padding: 0 8px;
     -webkit-app-region: drag;
+    display: none!important;
 }
 
 .title-bar-content {
@@ -487,6 +516,13 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     text-overflow: ellipsis;
 }
 
+/* Header buttons container */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 /* Leave Channel button in header */
 .header-leave-button {
     background: #e74c3c;
@@ -503,6 +539,25 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
 
 .header-leave-button:hover {
     background: #c0392b;
+    transform: translateY(-1px);
+}
+
+/* View Channel button in header */
+.header-view-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    -webkit-app-region: no-drag;
+}
+
+.header-view-button:hover {
+    background: #2980b9;
     transform: translateY(-1px);
 }
 
@@ -572,7 +627,7 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     background: #2b5278;
     border-radius: 18px;
     padding: 8px 12px;
-    max-width: 70%;
+    max-width: 90%;
     word-wrap: break-word;
     position: relative;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -671,6 +726,48 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     text-decoration: underline;
 }
 
+/* Code block styles */
+.message-text code {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #ff9500;
+    white-space: nowrap;
+    direction: ltr;
+    text-align: left;
+}
+
+.message-text pre {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.85em;
+    color: #ffffff;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    margin: 8px 0;
+    line-height: 1.4;
+    direction: ltr;
+    text-align: left;
+}
+
+.message-text pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+    white-space: inherit;
+    font-size: inherit;
+    direction: ltr;
+    text-align: left;
+}
+
 .message-bubble.own .message-text {
     color: #ffffff;
 }
@@ -749,7 +846,7 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     border-radius: 50px;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 3px 8px;
     gap: 8px;
     z-index: 999;
     -webkit-app-region: no-drag;
@@ -809,13 +906,13 @@ body.light-theme .menu-btn:active {
 .progress-container {
     position: fixed;
     bottom: 0;
-    left: 0;
     right: 0;
     background: rgba(15, 15, 16, 0.95);
     padding: 10px;
     z-index: 1000;
     display: none;
     border-top: 1px solid #2a2a2b;
+    width: 70%;
 }
 
 .progress-bar-bg {
@@ -851,7 +948,8 @@ body.light-theme .menu-btn:active {
     color: #e4e4e4;
     font-size: 12px;
     float: left;
-    direction: auto;
+    direction: rtl;
+    text-align: left;
     width: calc(100% - 200px);
 }
 
